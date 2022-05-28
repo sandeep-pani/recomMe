@@ -12,7 +12,7 @@ const SearchResults = () => {
   const [result, setResult] = useState([]);
   useEffect(() => {
     axios
-      .get("http://127.0.0.1:5000/getsearchresults/" + query + "/50")
+      .get("https://recomme-api.herokuapp.com/getsearchresults/" + query + "/50")
       .then((res) => {
         // console.log(res.data);
         const { message, searchResults } = res.data;

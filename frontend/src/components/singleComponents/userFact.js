@@ -24,7 +24,7 @@ const UserFact = () => {
 
   const getId = (fact_res) => {
     axios
-      .get("http://127.0.0.1:5000/getsearchresults/" + fact_res + "/1")
+      .get("https://recomme-api.herokuapp.com/getsearchresults/" + fact_res + "/1")
       .then((res) => {
         const search = res.data.searchResults;
         getImgFromId(search[0]);
@@ -35,7 +35,7 @@ const UserFact = () => {
   };
   const getFact = () => {
     axios
-      .get("http://127.0.0.1:5000/getuserfact/" + username)
+      .get("https://recomme-api.herokuapp.com/getuserfact/" + username)
       .then((res) => {
         const fact_res = res.data.value;
         if (fact_res) {

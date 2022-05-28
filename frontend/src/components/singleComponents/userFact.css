@@ -20,7 +20,7 @@
     border-radius: 20px;
     overflow: hidden;
   }
-
+  
   .stats-fact{
     font-size: 10px;
     color:rgba(141, 141, 141, 0.425);
@@ -33,23 +33,32 @@
     display:flex;
     justify-content: center;
     align-items: center;
-      flex-direction: column;
-      /* overflow: hidden; */
+    flex-direction: column;
+    /* overflow: hidden; */
   }
-
+  
   .fact-heading{
     position:absolute;
-      top:0;
-      margin:10px;
-      color: rgb(244, 255, 143);
-      font-size: 40px;
-      font-weight: 300;
+    top:0;
+    margin:10px;
+    color: rgb(244, 255, 143);
+    font-size: 40px;
+    font-weight: 300;
   }
   .fact-details-container{
-      font-size: 20px;
-      margin: 10px;
-      /* border: 1px solid white; */
+    font-size: 20px;
+    margin: 10px;
+    /* border: 1px solid white; */
     color:aliceblue;
   }
-
+  
+  @media only screen 
+  and (min-width : 320px) 
+  and (max-width : 1000px) {
+    /* Styles */
+    .fact-bg{
+      height:250px;
+      width: 95%;   
+    }
+  }
   

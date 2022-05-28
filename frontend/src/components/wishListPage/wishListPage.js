@@ -7,7 +7,7 @@ const WishListPage = () => {
   const [wishListItems, setWishListItems] = useState([]);
   useEffect(() => {
     axios
-      .get("http://127.0.0.1:5000/addorremovefromwishlist/" + username)
+      .get("https://recomme-api.herokuapp.com/addorremovefromwishlist/" + username)
       .then((res) => {
         setWishListItems(res.data.wishlist);
       })

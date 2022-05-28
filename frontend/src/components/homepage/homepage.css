@@ -37,7 +37,7 @@ and (max-width : 1000px){
         width: 100%;
     }
     .cards > *{
-        margin: 10px;
+        margin: 5px;
     }
 }
 

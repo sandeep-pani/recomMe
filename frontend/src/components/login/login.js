@@ -21,7 +21,8 @@ const Login = ({ updateUser }) => {
   };
 
   const login = () => {
-    axios.post("http://127.0.0.1:5000/login", user).then((res) => {
+    user.username = user.username.trim().toLowerCase();
+    axios.post("https://recomme-api.herokuapp.com/login", user).then((res) => {
       setLoginStatus(res.data.message);
       // console.log(res);
       updateUser(res.data.user);
@@ -36,7 +37,7 @@ const Login = ({ updateUser }) => {
           <input
             className="form-control"
             type="text"
-            placeholder="Enter your Email"
+            placeholder="Enter your username"
             name="username"
             value={user.username}
             onChange={handleChange}

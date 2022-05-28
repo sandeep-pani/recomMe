@@ -12,7 +12,7 @@ const WishListHeart = ({ tmdbId }) => {
   useEffect(() => {
     axios
       .get(
-        "http://127.0.0.1:5000/addorremovefromwishlist/" +
+        "https://recomme-api.herokuapp.com/addorremovefromwishlist/" +
           username +
           "/" +
           tmdbId
@@ -30,7 +30,7 @@ const WishListHeart = ({ tmdbId }) => {
     }
     axios
       .post(
-        "http://127.0.0.1:5000/addorremovefromwishlist/" +
+        "https://recomme-api.herokuapp.com/addorremovefromwishlist/" +
           username +
           "/" +
           tmdbId
@@ -56,7 +56,7 @@ export const StarRating = ({ updateIdRating, tmdbId }) => {
   const getRating = () => {
     axios
       .get(
-        "http://127.0.0.1:5000/getmovieratingbyid/" + username + "/" + tmdbId
+        "https://recomme-api.herokuapp.com/getmovieratingbyid/" + username + "/" + tmdbId
       )
       .then((res) => {
         const rated = res.data.rating;
@@ -73,7 +73,7 @@ export const StarRating = ({ updateIdRating, tmdbId }) => {
   // update the database with individual movie ratings of the user
   const starOnClickHandle = (index) => {
     axios
-      .post("http://127.0.0.1:5000/movieratings/" + username, {
+      .post("https://recomme-api.herokuapp.com/movieratings/" + username, {
         [tmdbId]: index,
       })
       .then((res) => {

@@ -21,7 +21,7 @@ const MovieInfo = () => {
     const no_of_movies = 10;
     axios
       .post(
-        "http://127.0.0.1:5000/getcontentbasedmovies/" +
+        "https://recomme-api.herokuapp.com/getcontentbasedmovies/" +
           tmdbId +
           "/" +
           no_of_movies

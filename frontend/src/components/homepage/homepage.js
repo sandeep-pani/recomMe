@@ -13,7 +13,7 @@ const Homepage = ({ updateUser }) => {
   const [userRatingsLen, setUserRatingsLen] = useState(0);
   // console.log(idRating);
   const getColdStartMovies = () => {
-    axios.get("http://127.0.0.1:5000/getcoldstartmovies").then((res) => {
+    axios.get("https://recomme-api.herokuapp.com/getcoldstartmovies").then((res) => {
       // console.log(res);
       setData(res.data);
     });
@@ -22,7 +22,7 @@ const Homepage = ({ updateUser }) => {
   const getUserRatings = () => {
     axios
       .get(
-        "http://127.0.0.1:5000/getuserratings/" +
+        "https://recomme-api.herokuapp.com/getuserratings/" +
           JSON.parse(localStorage.MyUser).username
       )
       .then((res) => {
@@ -43,7 +43,7 @@ const Homepage = ({ updateUser }) => {
   const submitColdMoviesHandle = () => {
     axios
       .post(
-        "http://127.0.0.1:5000/setuserstatus",
+        "https://recomme-api.herokuapp.com/setuserstatus",
         JSON.parse(localStorage.MyUser)
       )
       .then((res) => {

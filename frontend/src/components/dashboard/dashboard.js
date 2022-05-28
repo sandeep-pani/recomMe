@@ -18,7 +18,7 @@ const Dashboard = () => {
     const no_of_movies = 10;
     axios
       .get(
-        "http://127.0.0.1:5000/getcontentbasedmovies/" +
+        "https://recomme-api.herokuapp.com/getcontentbasedmovies/" +
           username +
           "/" +
           no_of_movies
@@ -31,7 +31,7 @@ const Dashboard = () => {
   const getCFMovies = async () => {
     const no_of_movies = 10;
     axios
-      .get("http://127.0.0.1:5000/getcfmovies/" + username + "/" + no_of_movies)
+      .get("https://recomme-api.herokuapp.com/getcfmovies/" + username + "/" + no_of_movies)
       .then((res) => {
         setTopCFMovies(res.data.predictedMovieIds);
         // console.log(res.data.predictedMovieIds);
@@ -39,7 +39,7 @@ const Dashboard = () => {
   };
 
   // function to get random genres and related movies
-  const getTopGenreMovies = () => {
+  const getTopGenreMovies = async () => {
     const allGenres = [
       "Action",
       "Adventure",
@@ -70,12 +70,12 @@ const Dashboard = () => {
     for (let i = 0; i < 4; i++) {
       axios
         .get(
-          "http://127.0.0.1:5000/getsearchresults/" +
+          "https://recomme-api.herokuapp.com/getsearchresults/" +
             randomGenres[i] +
             "/" +
             no_of_movies
         )
-        .then(async (res) => {
+        .then((res) => {
           const genreIds = res.data.searchResults;
           topGenreIdsObj[randomGenres[i]] = genreIds;
         })
