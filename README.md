@@ -6,7 +6,7 @@ Hosted at: https://recomme-engine.vercel.app/ <br/>
 - Note: <br/>
   - The backend is deployed on heroku on a free account, so the application sleeps if not pinged every 30 minutes. Please wait after pressing register until you see a "Success" message/alert and only then proceed to login.<br/>
   - I would recommend to clone the repository and run it locally to get the full experience.
-<br/>
+
 ## Features:
 
 1. Star rating: User can rate movies on the scale of 0 to 5, which is saved in the Database to recommend movies. <br/>
