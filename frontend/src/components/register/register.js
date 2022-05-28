@@ -28,12 +28,17 @@ const Register = () => {
       user.username = username.toLowerCase();      
     }
     if (name && username && username.indexOf(' ') < 1 && password && password === reEnterPassword) {
+      e.target.disabled = true;
       axios.post("https://recomme-api.herokuapp.com/register", user).then((res) => {
         setRegistrationStatus(res.data.message);
         if (res.data.message == "success") {
           alert("Successfully Registered");
           navigate("/login");
+          e.target.disabled = false;
         }
+      }).catch((err)=>{
+        e.target.disabled = false;
+        console.log(err);
       });
     } else {
       setRegistrationStatus("Invalid Input");
@@ -80,9 +85,9 @@ const Register = () => {
           />
           <span className="lr-status">{registrationStatus}</span>
           <br />
-          <div id = "register_btn" className="submit-lr-btn btn btn-primary" onClick={register} disabled={false}>
+          <button className="submit-lr-btn btn btn-primary" onClick={register} disabled={false}>
             Register
-          </div>
+          </button>
         </form>
         <a
           className="lr-anchor-btn"
