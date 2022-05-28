@@ -28,8 +28,6 @@ const Register = () => {
       user.username = username.toLowerCase();      
     }
     if (name && username && username.indexOf(' ') < 1 && password && password === reEnterPassword) {
-      var button = document.getElementById(e.target.register_btn)
-      button.disabled = true
       axios.post("https://recomme-api.herokuapp.com/register", user).then((res) => {
         setRegistrationStatus(res.data.message);
         if (res.data.message == "success") {
