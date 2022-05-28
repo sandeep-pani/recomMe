@@ -24,13 +24,13 @@ class Register(Resource):
 
     def post(self):
         name, username, password, reEnterPassword = request.get_json().values()
-        print(name, username, password)
+        hashed_password = self.hash_password(password)
 
         if(Users.objects(username=username)):
             return {"message": "User already registered"}
         else:
             Users(name=name, username=username,
-                  password=self.hash_password(password), newUser=True).save()
+                  password=hashed_password, newUser=True).save()
             return {"message": "success"}
 
 
