@@ -21,7 +21,7 @@ const Register = () => {
     });
   };
 
-  const register = () => {
+  const register = async () => {
     var { name, username, password, reEnterPassword } = user;
     if(username){
       username = username.trim();

@@ -20,7 +20,7 @@ const Login = ({ updateUser }) => {
     });
   };
 
-  const login = () => {
+  const login = async() => {
     user.username = user.username.trim().toLowerCase();
     axios.post("https://recomme-api.herokuapp.com/login", user).then((res) => {
       setLoginStatus(res.data.message);
