@@ -23,7 +23,11 @@ const Register = () => {
 
   const register = () => {
     const { name, username, password, reEnterPassword } = user;
-    if (name && username && password && password === reEnterPassword) {
+    if(username){
+      username = username.trim();
+      user.username = username.toLowerCase();      
+    }
+    if (name && username && username.indexOf(' ') < 1 && password && password === reEnterPassword) {
       axios.post("http://127.0.0.1:5000/register", user).then((res) => {
         setRegistrationStatus(res.data.message);
         if (res.data.message == "success") {
