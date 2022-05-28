@@ -29,15 +29,18 @@ const Register = () => {
     }
     if (name && username && username.indexOf(' ') < 1 && password && password === reEnterPassword) {
       e.target.disabled = true;
+      e.target.innerHTML = "Please Wait..."
       axios.post("https://recomme-api.herokuapp.com/register", user).then((res) => {
         setRegistrationStatus(res.data.message);
         if (res.data.message == "success") {
           alert("Successfully Registered");
           navigate("/login");
           e.target.disabled = false;
+          e.target.innerHTML = "Register"
         }
       }).catch((err)=>{
         e.target.disabled = false;
+        e.target.innerHTML = "Register"
         console.log(err);
       });
     } else {
