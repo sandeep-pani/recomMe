@@ -6,7 +6,6 @@ import Navbar from "./components/navbar/navbar";
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Dashboard from "./components/dashboard/dashboard";
-import SearchBar from "./components/singleComponents/searchBar";
 import SearchResults from "./components/searchResults/searchResults";
 import MovieInfo from "./components/movieInfo/movieInfo";
 import "swiper/css/bundle";
