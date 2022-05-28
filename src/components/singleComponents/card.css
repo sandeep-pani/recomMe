@@ -1,0 +1,135 @@
+button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.on {
+    color: rgb(255, 230, 0);
+}
+
+.off {
+    color: rgb(255, 255, 255);
+}
+
+.full-card {
+    position: relative;
+    display:flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+    height: 454px;
+    width:185px;
+    /* border: 1px solid black; */
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #1d1d1d;
+    color: white;
+    transition: all .2s ease-in-out;   
+    
+}
+
+.full-card:hover{    
+    transform: scale(1.05);
+}
+
+.star {
+    font-size: 35px;
+    margin: -7px;
+}
+
+.star-rating-component {
+    /* border: 1px solid black; */
+    position: absolute;
+    transition: .5s ease;
+    opacity: 0;
+    bottom: 5px;
+}
+.img-container{
+    position: relative;
+    width:inherit;
+    height: 274px;
+    /* display: flex; */
+    background-color: rgb(34, 34, 34);
+    cursor: pointer;
+}
+#card-img {
+    /* display: block; */
+    /* border: 1px solid black; */
+    /* position:absolute; */
+    background-color: white;
+    background: transparent url('../../static/spinning-loading.gif') center no-repeat;
+    background-size: contain;
+    width: 185px;
+    height: 274px;
+}
+
+
+.full-card:hover .star-rating-component {
+    opacity: 1;
+}
+.movie-details-container{
+    display:flex;
+    flex-direction: column;
+    margin: 10px;
+    padding: 10px;
+    /* border:2px solid black; */
+    width: inherit;
+    position:relative;
+}
+
+.heart-button{
+    color:#ff1c1c; 
+    position:absolute;
+    top: 0px;
+    right:0;
+    font-size: 25px;
+    margin:10px;
+    z-index: 1;
+    cursor: pointer;
+    transition: 0.5 ease;
+}
+
+.heart-button:hover{
+    color:rgb(255, 85, 85);
+}
+.card-title{
+    font-size: 17px;
+    font-weight:500;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* number of lines to show */
+    cursor: pointer;
+    line-clamp: 2; 
+    -webkit-box-orient: vertical;
+}
+.card-title:hover {
+    text-decoration: underline;
+}
+
+
+.sub-info-container{
+    font-size: 12px;
+    color:rgb(255, 255, 0);
+}
+
+.vote-average-container{
+    color: rgb(0, 195, 255);
+    font-weight: 600;
+    font-size: larger;
+}
+
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+/* Styles */
+    .star-rating-component{
+        opacity: 1;
+    }
+
+}
+
+
+ 

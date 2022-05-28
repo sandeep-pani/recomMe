@@ -1,0 +1,39 @@
+.profile-btn{
+    position:absolute;
+    right:20px;
+    z-index: 5;
+}
+
+.dropdown-item{
+    cursor:pointer;
+    background-color: white;
+    
+}
+
+.logout-btn{
+    color:red;
+    font-weight: 600;
+}
+
+.navbar-brand{
+    cursor: pointer;
+}
+
+.dropdown-name{
+    background-color: white;
+    color:rgb(65, 65, 65);
+    text-align: center;
+    margin: 3px;
+    font-size: 18px;
+}
+/* .my-navbar{
+} */
+#gradient-navbar{
+    position:absolute;
+    top:0;
+    height:110px;
+    /* background-color: red; */
+    width:100%;
+    background-image: linear-gradient(to bottom, rgb(0, 0, 0) , rgba(0, 0, 0, 0));
+    z-index: -2;
+  }

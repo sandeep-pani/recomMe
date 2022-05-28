@@ -1,0 +1,96 @@
+import React, { useState } from "react";
+import "./register.css";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
+
+const Register = () => {
+  const navigate = useNavigate();
+  const [registrationStatus, setRegistrationStatus] = useState("");
+  const [user, setUser] = useState({
+    name: "",
+    username: "",
+    password: "",
+    reEnterPassword: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setUser({
+      ...user, // preserving the previous state
+      [name]: value,
+    });
+  };
+
+  const register = () => {
+    const { name, username, password, reEnterPassword } = user;
+    if (name && username && password && password === reEnterPassword) {
+      axios.post("http://127.0.0.1:5000/register", user).then((res) => {
+        setRegistrationStatus(res.data.message);
+        if (res.data.message == "success") {
+          alert("Successfully Registered");
+          navigate("/login");
+        }
+      });
+    } else {
+      setRegistrationStatus("Invalid Input");
+    }
+  };
+  return (
+    <div className="register-page">
+      {/* {console.log(user)} */}
+      <div className="register-box">
+        <h1>Register</h1>
+        <form className="text-boxes col-sm-2">
+          <input
+            name="name"
+            value={user.name}
+            onChange={handleChange}
+            className="form-control"
+            type="text"
+            placeholder="Enter your Name"
+          />
+          <input
+            name="username"
+            value={user.username}
+            onChange={handleChange}
+            className="form-control"
+            type="text"
+            placeholder="Enter your username"
+          />
+
+          <input
+            name="password"
+            value={user.password}
+            onChange={handleChange}
+            className="form-control"
+            type="password"
+            placeholder="Enter your password"
+          />
+          <input
+            name="reEnterPassword"
+            value={user.reEnterPassword}
+            onChange={handleChange}
+            className="form-control"
+            type="password"
+            placeholder="Confirm your password"
+          />
+          <span className="lr-status">{registrationStatus}</span>
+          <br />
+          <div className="submit-lr-btn btn btn-primary" onClick={register}>
+            Register
+          </div>
+        </form>
+        <a
+          className="lr-anchor-btn"
+          onClick={() => {
+            navigate("/login");
+          }}
+        >
+          Already registered? Click here to login.
+        </a>
+      </div>
+    </div>
+  );
+};
+
+export default Register;

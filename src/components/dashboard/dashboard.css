@@ -1,0 +1,65 @@
+.dashboard-main-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.card-rows-container{
+    max-width: 75%;
+}
+
+.dashboard-heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top:30px;
+    
+}
+
+.refresh-recommendation-btn{
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+@media only screen 
+and (min-width : 320px) 
+and (max-width : 1000px) {
+/* Styles */
+.card-rows-container{
+    max-width: 100%;
+}
+
+.dashboard-heading{
+    margin:20px;
+    
+}
+
+.dashboard-rec-headings{
+    margin:10px;
+}
+
+}
+.card-row-bg{
+    /* background-color:#1b1b1b; */
+    border-radius: 15px;
+    background-image: linear-gradient(to bottom right, rgb(22, 22, 22) , rgb(0, 0, 0));
+    overflow: hidden;
+}
+
+.asterisk-headings{
+    font-style: italic;
+    color:rgb(105, 105, 105);
+    /* margin-top: -3px; */
+    margin-left: 5px;
+}
+
+.dashboard-userfact{
+    display: flex;
+    justify-content: center;
+    width: inherit;
+    margin: 20px;
+    margin-bottom: 30px;
+    /* border: 1px solid white; */
+}

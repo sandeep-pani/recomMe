@@ -1,0 +1,34 @@
+.register-page{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.register-box{
+    color:white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid white;
+    height: 420px;
+    width: 500px;
+    text-align: center;
+}
+
+.lr-status{
+    color: rgb(255, 50, 50);
+}
+
+.register-page > *{
+    margin : 5px;
+}
+
+@media only screen 
+and (min-width : 320px) 
+and (max-width : 1000px){
+    .register-box{
+        border:none;
+        width:400px;
+    }
+}
