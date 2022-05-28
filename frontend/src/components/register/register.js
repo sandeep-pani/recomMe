@@ -49,7 +49,7 @@ const Register = () => {
       {/* {console.log(user)} */}
       <div className="register-box">
         <h1>Register</h1>
-        <form className="text-boxes col-sm-2">
+        <div className="text-boxes col-sm-2">
           <input
             name="name"
             value={user.name}
@@ -88,7 +88,7 @@ const Register = () => {
           <button className="submit-lr-btn btn btn-primary" onClick={register} disabled={false}>
             Register
           </button>
-        </form>
+        </div>
         <a
           className="lr-anchor-btn"
           onClick={() => {
