@@ -1,0 +1,47 @@
+.login-page{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color:white;
+}
+
+.login-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid white;
+    height: 350px;
+    width: 500px;
+    text-align: center;
+}
+
+@media only screen 
+and (min-width : 320px) 
+and (max-width : 1000px){
+    .login-box{
+        width: 400px;
+        border:none;
+    }
+}
+.text-boxes{
+    width: 70%;
+}
+.text-boxes > *{
+    margin-bottom:15px;
+    margin-top:15px;
+}
+.login-page > *{
+    margin : 5px;
+}
+
+.lr-anchor-btn{
+    cursor: pointer;
+    color:rgb(0, 119, 255);
+}
+
+.submit-lr-btn{
+    width: 100%;
+    background-color:blue;
+    border: none;
+}
