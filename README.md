@@ -7,6 +7,9 @@ Hosted at: https://recomme-engine.vercel.app/ <br/>
   - The backend is deployed on heroku on a free account, so the application sleeps if not pinged every 30 minutes. Please wait after pressing register until you see a "Success" message/alert and only then proceed to login.<br/>
   - I would recommend to clone the repository and run it locally to get the full experience.
 
+## Datasets:
+- Used 100k MovieLens Dataset, filtered it to use about 2300 movies and 100,000 user ratings.
+
 ## Tech Stack and APIs:
 ![MS Engage Flowchart resized](https://user-images.githubusercontent.com/80412459/170856449-fc6253c9-5ab8-4949-ad54-51c0091957b1.png)
 
