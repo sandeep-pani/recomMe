@@ -21,6 +21,7 @@ const Login = ({ updateUser }) => {
   };
 
   const login = () => {
+    user.username = user.username.trim().toLowerCase();
     axios.post("http://127.0.0.1:5000/login", user).then((res) => {
       setLoginStatus(res.data.message);
       // console.log(res);

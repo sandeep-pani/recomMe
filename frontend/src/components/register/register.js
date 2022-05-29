@@ -21,15 +21,27 @@ const Register = () => {
     });
   };
 
-  const register = () => {
-    const { name, username, password, reEnterPassword } = user;
-    if (name && username && password && password === reEnterPassword) {
+  const register = (e) => {
+    var { name, username, password, reEnterPassword } = user;
+    if(username){
+      username = username.trim();
+      user.username = username.toLowerCase();      
+    }
+    if (name && username && username.indexOf(' ') < 1 && password && password === reEnterPassword) {
+      e.target.disabled = true;
+      e.target.innerHTML = "Please Wait..."
       axios.post("http://127.0.0.1:5000/register", user).then((res) => {
         setRegistrationStatus(res.data.message);
         if (res.data.message == "success") {
           alert("Successfully Registered");
           navigate("/login");
+          e.target.disabled = false;
+          e.target.innerHTML = "Register"
         }
+      }).catch((err)=>{
+        e.target.disabled = false;
+        e.target.innerHTML = "Register"
+        console.log(err);
       });
     } else {
       setRegistrationStatus("Invalid Input");
@@ -40,7 +52,7 @@ const Register = () => {
       {/* {console.log(user)} */}
       <div className="register-box">
         <h1>Register</h1>
-        <form className="text-boxes col-sm-2">
+        <div className="text-boxes col-sm-2">
           <input
             name="name"
             value={user.name}
@@ -76,10 +88,10 @@ const Register = () => {
           />
           <span className="lr-status">{registrationStatus}</span>
           <br />
-          <div className="submit-lr-btn btn btn-primary" onClick={register}>
+          <button className="submit-lr-btn btn btn-primary" onClick={register} disabled={false}>
             Register
-          </div>
-        </form>
+          </button>
+        </div>
         <a
           className="lr-anchor-btn"
           onClick={() => {
