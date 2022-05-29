@@ -9,7 +9,7 @@ Hosted at: https://recomme-engine.vercel.app/ <br/>
 
 ## Features:
 
-1. Star rating: User can rate movies on the scale of 0 to 5, which is saved in the Database to recommend movies. <br/>
+1. Star rating: User can rate movies on the scale of 0 to 5, which is saved in the database to recommend movies. <br/>
 2. **Cold-start problem**: (when user has no history of ratings so recommendations can't be fetched) 
     - Prevented by asking users to rate a few movies before fetching recommendations.<br/>
 3. **Content Based Recommendations**: *(refer to "content_based.py" and "get_content_based.py")*
@@ -25,13 +25,39 @@ Hosted at: https://recomme-engine.vercel.app/ <br/>
     - This fetches and shows the movies with the highest "points" first.
     - "points" factor is calculated using movie popularity, vote_average, vote_count
     - Query is not limited to movie titles. User can also search by genres/directors/cast/year of release or related key         words. ex: "Comedy movies", "Christopher Nolan movies", "Avatar"
-6. Movie Info: Clicking on the movie card gives the user a brief about the movie
+6. Movie Info: Clicking on the movie card gives the user a brief about the movie.
     - Also displays movies similar to the particular movie clicked.
 7. User Fact: Finds a keyword common in user's top rated movies and displays as a fact.
-8. Wishlist: User can save movie to wishlist for later.
-9. Refresh Recommendation Button: To get instant recommendations based on the movies liked
+8. Wishlist: User can save movies to wishlist for later.
+9. Refresh Recommendation Button: To get instant recommendations based on the movies rated.
 10. Login System: Provided a fully responsive register/login system. 
 11. User Interface: 
     - Provided an interactive user friendly interface.
     - ***Fully optimised for smaller screens.***
 
+## Installation Guide
+- Make sure you have node and python installed.
+1. Backend:
+```
+cd backend
+```
+install dependencies:
+```
+pip install -r requirements.txt
+```
+run server (running at port 5000):
+```
+python app.py
+```
+2. Frontend:
+```
+cd frontend
+```
+install dependencies:
+```
+npm i
+```
+run server (running at port 3000):
+```
+npm start
+```
