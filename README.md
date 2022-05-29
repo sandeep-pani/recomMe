@@ -1,4 +1,7 @@
 # recomMe
+![image](https://user-images.githubusercontent.com/80412459/170861115-b3589b15-3e14-429c-8e4d-cea8249c9982.png)
+![Screenshot 2022-05-29 145425](https://user-images.githubusercontent.com/80412459/170861281-58f4b33c-f2d6-4c0e-8907-fc8e4a765281.jpg)
+
 A web application that uses Machine learning to fetch recommendations based on user's rating history.<br/><br/>
 
 Video at: <br/>
