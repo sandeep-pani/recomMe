@@ -5,7 +5,7 @@
 
 <br/><br/>
 
-Video at: <br/>
+Video at: https://www.youtube.com/watch?v=HfnsXtljXu0 <br/>
 Hosted at: https://recomme-engine.vercel.app/ <br/>
 - Note: <br/>
   - The backend is deployed on Heroku on a free account, so the application sleeps if not pinged every 30 minutes. Please wait after pressing register until you see a "Success" message/alert and only then proceed to login.<br/>
