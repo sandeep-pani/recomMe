@@ -37,7 +37,7 @@ const Login = ({ updateUser }) => {
           <input
             className="form-control"
             type="text"
-            placeholder="Enter your Email"
+            placeholder="Enter your username"
             name="username"
             value={user.username}
             onChange={handleChange}
