@@ -42,7 +42,7 @@ Hosted at: https://recomme-engine.vercel.app/ <br/>
 10. Login System: Provided a fully responsive register/login system. 
 11. User Interface: 
     - Provided an interactive user friendly interface.
-    - ***Fully optimised for smaller screens.***
+    - ***Fully optimised for smaller screens as well.***
 
 ## Installation Guide
 - Make sure you have node and python installed.
